@@ -38,7 +38,7 @@ You use it for:
 
 ---
 
-## Connect via USB Console
+### Connect via USB Console
 
 Turn on the switch and connect it to the server using a USB cable  
 (red USB port on the switch).
@@ -51,7 +51,7 @@ ls /dev/tty*
 
 ---
 
-## Install and Open Minicom
+### Install and Open Minicom
 
 ```bash
 sudo apt install minicom
@@ -60,7 +60,7 @@ sudo minicom -b 115200 -D /dev/ttyUSB0
 
 ---
 
-## Configure Minicom
+### Configure Minicom
 
 Press:
 
@@ -89,7 +89,7 @@ Save setup as default (`dfl`).
 
 ---
 
-## Login to the Switch
+### Login to the Switch
 
 ```text
 Username: moose
@@ -98,7 +98,7 @@ Password: 1234
 
 ---
 
-## Configure Management IP
+### Configure Management IP
 
 ```text
 Falcon# configure terminal interface vlan 1 ip address 192.168.1.90 255.255.255.0 exit
