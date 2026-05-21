@@ -329,7 +329,7 @@ Now we move into the RU Integration (Open Fronthaul)
 
 # Benetel RAN 650 
 
-Connect the Benetel port (Fiber 1) to Port 2 on the switch (Ports 1 and 2 were included in the setup. The srsRAN shows 13 onwards but we are using these two)
+Connect the Benetel port (Fiber 1) to Port 2 on the switch (Ports 1 and 2 were included in the setup. The srsRAN switch config documentation linked above shows 13 onwards but we also added these two ports in the list)
 
 RU Management access:
 ```text
