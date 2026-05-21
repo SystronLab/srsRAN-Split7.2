@@ -326,3 +326,36 @@ Building configuration... % Saving 6895 bytes to flash:startup-config 2026-05-21
 After saving the configuration, power cycle the switch and test the PTP commands again.
 
 Now we move into the RU Integration (Open Fronthaul)
+
+# Benetel RAN 650 
+
+Connect the Benetel port (Fiber 1) to Port 2 on the switch (Ports 1 and 2 were included in the setup. The srsRAN shows 13 onwards but we are using these two)
+
+RU Management access:
+```text
+sudo ip addr add 10.10.0.1/24 dev ens7f1
+
+ping 10.10.0.100
+
+ssh root@10.10.0.100
+```
+## Next step inside the RU
+
+Check RU synchronization state
+
+```text
+cat /var/syncmon/sync-state
+```
+Output should be 0 (means locked)
+
+```text
+cat /etc/ru-sync-mode
+```
+
+Output should be PTP
+
+If you get these outputs, it means the RAN650 is synchronized via the Falcon Grandmaster
+
+Next run,
+
+oru_vlan_mac_info
