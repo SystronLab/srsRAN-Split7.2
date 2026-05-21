@@ -311,7 +311,18 @@ This is the key line:
 ```text
 UNCALIBRATED to SLAVE on MASTER_CLOCK_SELECTED
 ```
-
 That means ens7f1 hardware clock is synchronized to the Falcon Grandmaster
+
+Once this works perfectly, save this configuration of the switch so that it persists even after reboots.
+Log into the Falcon# terminal and run:
+
+```text
+copy running-config startup-config
+```
+Ouput should be:
+```text
+Building configuration... % Saving 6895 bytes to flash:startup-config 2026-05-21T09:18:58.095+00:00: DEVICE configuration changed (copied to startup-config) from local
+```
+After saving the configuration, power cycle the switch and test the PTP commands again.
 
 Now we move into the RU Integration (Open Fronthaul)
